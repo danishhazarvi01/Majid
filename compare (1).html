@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PRODUCT COMPARE</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script>
+var productname = new Array("Toyota","Honda","Ford","BMW","Volkswagen","Nissan","Mercedes-Benz","Tesla","Audi","Kia","Tata-Motors","Mazda","Suzuki","Farrari");
+var productdetail = new Array("Production of Toyota vehicles outside Japan began in 1959 in Brazil and now, besides its own plants, manufacturing subsidiaries and affiliates in Japan, Toyota manufactures Toyota and Lexus brand vehicles and components throughout the world.","Honda Motor Company, Ltd., Japanese Honda Giken Kōgyō KK, leading Japanese manufacturer of motorcycles and a major producer of automobiles for the world market. Headquarters are in Tokyo.","Ford-Werke GmbH is a German car manufacturer headquartered in Niehl, Cologne, North Rhine-Westphalia. It is a subsidiary of Ford Motor Company, which operates two large manufacturing facilities in Germany, a plant in Cologne and a plant in Saarlouis.","The acronym BMW stands for Bayerische Motoren Werke GmbH, which roughly translates to the Bavarian Engine Works Company. The name harks back to the company's origin in the German state of Bavaria. It also indicates BMW's original product range: engines for various applications.","Volkswagen Group China (VGC is a division of the German automotive concern Volkswagen Group in the People's Republic of China. Volkswagen Group China enjoys sales of about 3.14 million cars (2017) in the Chinese market and is the largest brand in China by sales.","The name Nissan originated in Japan, when founder Yoshisuke Aikawa became president of Nihon Sangyo in 1928. Primarily dealing in foundries and auto parts, Nihon Sangyo debuted on the Tokyo Stock Exchange by its ticker name NISSAN in 1933.","Mercedes-Benz AG (a Mercedes-Benz Group subsidiary established in 2019) is headquartered in Stuttgart, Baden-Württemberg, Germany.","Tesla, Inc., formerly (2003–17) Tesla Motors, American manufacturer of electric automobiles, solar panels, and batteries for cars and home power storage. It was founded in 2003 by American entrepreneurs Martin Eberhard and Marc Tarpenning and was named after Serbian American inventor Nikola Tesla.","Audi remains one of the top German auto manufacturers, but who owns Audi? As a subsidiary of the Volkswagen Group, Audi has remained true to its German roots and continued to produce premium vehicles that wow with their luxe features and impressive performance.","In 1998, Hyundai bought out Kia with a 51% stake in the company. Now, that share has reduced to about a third, and the two are considered sister companies. As a result of their close relationship, Hyundai and Kia often share vehicle platforms.","Tata Motors Cars — Tata Motors Limited is an Indian multinational automotive manufacturing company, headquartered in Mumbai, India, which is part of the.","Ever wondered how a Japanese car company that “Celebrates Driving” got its name? The name “Mazda” was introduced to Japan in October 1931. Mazda started its life as a cork manufacturer back in 1920.","Suzuki Motor Corporation (Japanese: スズキ株式会社, Hepburn: Suzuki Kabushiki-Gaisha)[4] is a Japanese multinational corporation headquartered in Minami-ku, Hamamatsu, Japan.[5] Suzuki manufactures automobiles, motorcycles, all-terrain vehicles (ATVs), outboard marine engines, wheelchairs and a variety of other small internal combustion engines. In 2016, Suzuki was the eleventh biggest automaker by production worldwide.[6] Suzuki has over 45,000 employees and has 35 production facilities in 23 countries, and 133 distributors in 192 countries. The worldwide sales volume of automobiles is the world's tenth largest,[7] while domestic sales volume is the third largest in the country","Ferrari is primarily a publicly owned company, with Piero Ferrari and Exor N.V. rounding out the ownership.");
+var productprice = new Array("Car:- Avalon","Car:- CIVIC","Car:- EcoSport","Car:- BMW E30 M3","Car:- Beetle","Car:- Nissan Magnite","Car:- Magazine Mercedes-AMG GT","Car:- Tesla Model 3 ","Car:- Audi R8 Series","Car:- Kia Forte","Car:- Tata Altroz","Car:- Mazda R360","Car:- Suzuki Alto 800","Car:- Ferrari 250 GTO");
+var productimage = new Array("images/toyota.jpg","images/honda.jpg","images/ford.jpg","images/BMW.jpg","images/volks.jpg","images/nissan.jpg","images/mer.jpg","images/tesla.jpg","images/audi.jpg","images/kia.jpg" ,"images/tata.jpg","images/mazda.jpg","images/suzuki.jpg","images/ferrari.jpg");
+	
+function oncreate(y) //define
+{
+	var sel = document.getElementById("cmb");
+	var op = document.createElement("option");
+	op.text = y;
+	op.value = y;
+	sel.add(op,null);
+	
+ }
+function xyz() //define
+{
+	for(var i=0;i<productname.length;i++)
+	{
+		oncreate(productname[i]);
+		
+	}
+	
+}
+function getvalue()
+{
+	var a = document.getElementById("cmb").selectedIndex;
+	document.getElementById("details").innerHTML = productdetail[a];
+	
+	var b = document.getElementById("cmb").selectedIndex;
+	document.getElementById("heading").innerHTML = productname[b];
+	
+	var c = document.getElementById("cmb").selectedIndex;
+	document.getElementById("price").innerHTML=productprice[c]; 
+	
+	var d = document.getElementById("cmb").selectedIndex;
+	document.getElementById("proimg").src = productimage[d];
+	
+}
+//-------------------------------------------------
+
+var productname1 = new Array("Toyota","Honda","Ford","BMW","Volkswagen","Nissan","Mercedes-Benz","Tesla","Audi","Kia","Tata-Motors","Mazda","Suzuki","Farrari");
+var productdetail1 = new Array("Production of Toyota vehicles outside Japan began in 1959 in Brazil and now, besides its own plants, manufacturing subsidiaries and affiliates in Japan, Toyota manufactures Toyota and Lexus brand vehicles and components throughout the world.","Honda Motor Company, Ltd., Japanese Honda Giken Kōgyō KK, leading Japanese manufacturer of motorcycles and a major producer of automobiles for the world market. Headquarters are in Tokyo.","Ford-Werke GmbH is a German car manufacturer headquartered in Niehl, Cologne, North Rhine-Westphalia. It is a subsidiary of Ford Motor Company, which operates two large manufacturing facilities in Germany, a plant in Cologne and a plant in Saarlouis.","The acronym BMW stands for Bayerische Motoren Werke GmbH, which roughly translates to the Bavarian Engine Works Company. The name harks back to the company's origin in the German state of Bavaria. It also indicates BMW's original product range: engines for various applications.","Volkswagen Group China (VGC is a division of the German automotive concern Volkswagen Group in the People's Republic of China. Volkswagen Group China enjoys sales of about 3.14 million cars (2017) in the Chinese market and is the largest brand in China by sales.","The name Nissan originated in Japan, when founder Yoshisuke Aikawa became president of Nihon Sangyo in 1928. Primarily dealing in foundries and auto parts, Nihon Sangyo debuted on the Tokyo Stock Exchange by its ticker name NISSAN in 1933.","Mercedes-Benz AG (a Mercedes-Benz Group subsidiary established in 2019) is headquartered in Stuttgart, Baden-Württemberg, Germany.","Tesla, Inc., formerly (2003–17) Tesla Motors, American manufacturer of electric automobiles, solar panels, and batteries for cars and home power storage. It was founded in 2003 by American entrepreneurs Martin Eberhard and Marc Tarpenning and was named after Serbian American inventor Nikola Tesla.","Audi remains one of the top German auto manufacturers, but who owns Audi? As a subsidiary of the Volkswagen Group, Audi has remained true to its German roots and continued to produce premium vehicles that wow with their luxe features and impressive performance.","In 1998, Hyundai bought out Kia with a 51% stake in the company. Now, that share has reduced to about a third, and the two are considered sister companies. As a result of their close relationship, Hyundai and Kia often share vehicle platforms.","Tata Motors Cars — Tata Motors Limited is an Indian multinational automotive manufacturing company, headquartered in Mumbai, India, which is part of the.","Ever wondered how a Japanese car company that “Celebrates Driving” got its name? The name “Mazda” was introduced to Japan in October 1931. Mazda started its life as a cork manufacturer back in 1920.","Suzuki Motor Corporation (Japanese: スズキ株式会社, Hepburn: Suzuki Kabushiki-Gaisha)[4] is a Japanese multinational corporation headquartered in Minami-ku, Hamamatsu, Japan.[5] Suzuki manufactures automobiles, motorcycles, all-terrain vehicles (ATVs), outboard marine engines, wheelchairs and a variety of other small internal combustion engines. In 2016, Suzuki was the eleventh biggest automaker by production worldwide.[6] Suzuki has over 45,000 employees and has 35 production facilities in 23 countries, and 133 distributors in 192 countries. The worldwide sales volume of automobiles is the world's tenth largest,[7] while domestic sales volume is the third largest in the country","Ferrari is primarily a publicly owned company, with Piero Ferrari and Exor N.V. rounding out the ownership.");
+var productprice1 = new Array("Car:- Avalon","Car:- CIVIC","Car:- EcoSport","Car:- BMW E30 M3","Car:- Beetle","Car:- Nissan Magnite","Car:- Magazine Mercedes-AMG GT","Car:- Tesla Model 3 ","Car:- Audi R8 Series","Car:- Kia Forte","Car:- Tata Altroz","Car:- Mazda R360","Car:- Suzuki Alto 800","Car:- Ferrari 250 GTO");
+var productimage1 = new Array("images/toyota.jpg","images/honda.jpg","images/ford.jpg","images/BMW.jpg","images/volks.jpg","images/nissan.jpg","images/mer.jpg","images/tesla.jpg","images/audi.jpg","images/kia.jpg" ,"images/tata.jpg","images/mazda.jpg","images/suzuki.jpg","images/ferrari.jpg");
+
+function oncreate1(y) //define
+{
+	var sel1 = document.getElementById("cmb1");
+	var op1 = document.createElement("option");
+	op1.text = y;
+	op1.value = y;
+	sel1.add(op1,null);
+	
+}
+function xyz1() //define
+{
+	for(var i=0;i<productname1.length;i++)
+	{
+		oncreate1(productname1[i]);
+		
+	}
+	
+}
+function getvalue1()
+{
+	var a = document.getElementById("cmb1").selectedIndex;
+	document.getElementById("heading1").innerHTML = productname1[a];
+	
+	var b = document.getElementById("cmb1").selectedIndex;
+	document.getElementById("details1").innerHTML = productdetail1[b]
+	
+	var c = document.getElementById("cmb1").selectedIndex;
+	document.getElementById("price1").innerHTML=productprice1[c]; 
+	
+	var d = document.getElementById("cmb1").selectedIndex;
+	document.getElementById("proimg1").src = productimage1[d];
+}
+</script>
+</head>
+
+<body style="background-color:blanchedalmond" onload="xyz() ,xyz1()">
+	<div class="container">
+		<div class="row">
+			<div  class="col-12">
+				<h1>Product Comparision</h1>
+			</div>
+		</div>
+		<div style="align-content: center" class="row">
+			<div style="align-content: center" class="col-md-5">
+				
+				<select id="cmb" onchange="getvalue()"></select>
+				<h1 id="heading"></h1>
+				<p style="text-align: justify" id="details"></p>
+				<h3 id="price"></h3>
+				<img id="proimg" width="300" height="200"/>
+			</div>
+			<div style="padding-top: 100px ; text-align: center" class="col-md-2">
+			<h1 style="font-size: 100px; "><b>VS</b></h1>
+			</div>
+			<div  style="align-content: center" class="col-md-5">
+				<select id="cmb1" onchange="getvalue1()"></select>
+				<h1 id="heading1"></h1>
+				<p style="text-align: justify" id="details1"></p>
+				<h3 id="price1"></h3>
+				<img id="proimg1" width="300" height="200"/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
